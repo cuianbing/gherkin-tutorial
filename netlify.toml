@@ -9,8 +9,7 @@
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--no-audit --no-fund"
-  # Netlify 部署在根路径，保持默认 BASE_PATH="/"
-  VITEPRESS_TELEMETRY_DISABLED = "1"
+  # Netlify 部署在根路径，不设置 BASE_PATH 即保持默认 "/"
 
 # VitePress 生成的静态资源带内容哈希，可长期缓存
 [[headers]]
