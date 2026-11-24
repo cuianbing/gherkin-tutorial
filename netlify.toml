@@ -1,0 +1,28 @@
+# Netlify 部署配置
+# 站点地址：https://<site-name>.netlify.app（绑定自定义域名后自动切换）
+# 只从 Git 仓库构建源码，构建产物 docs/.vitepress/dist 不入库
+
+[build]
+  command = "npm run build"
+  publish = "docs/.vitepress/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--no-audit --no-fund"
+  # Netlify 部署在根路径，保持默认 BASE_PATH="/"
+  VITEPRESS_TELEMETRY_DISABLED = "1"
+
+# VitePress 生成的静态资源带内容哈希，可长期缓存
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 404 页面由 VitePress 生成为 /404.html，Netlify 会自动使用

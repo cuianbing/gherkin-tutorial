@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Gherkin 教程">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3c8772"/>
+      <stop offset="1" stop-color="#6cbf8a"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="15" fill="url(#bg)"/>
+  <path d="M33 20c2-4 5-6 8-6" fill="none" stroke="#dff3d9" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="32" cy="37" rx="13.5" ry="17.5" fill="#f4fbf1"/>
+  <path d="M32 22.5c-4.2 4.6-4.2 9.8 0 14.4s4.2 9.8 0 14.4" fill="none" stroke="#a5d6a7" stroke-width="1.8"/>
+  <path d="M26.5 24.5c-3.4 4.4-3.4 10.4 0 14.8s3.4 10.4 0 15.2" fill="none" stroke="#a5d6a7" stroke-width="1.4" stroke-opacity=".7"/>
+  <path d="M37.5 24.5c3.4 4.4 3.4 10.4 0 14.8s-3.4 10.4 0 15.2" fill="none" stroke="#a5d6a7" stroke-width="1.4" stroke-opacity=".7"/>
+</svg>
